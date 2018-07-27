@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6674396210B448A009F8DBB /* 01-Splash-Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6674395210B448A009F8DBB /* 01-Splash-Screen.jpg */; };
 		B6B875B220FF0DDB008CA039 /* CoreData_OX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6B875B020FF0DDB008CA039 /* CoreData_OX.xcdatamodeld */; };
 		B6B875B420FF0DDB008CA039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B875B320FF0DDB008CA039 /* Assets.xcassets */; };
 		B6B875C720FF0E3D008CA039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B875C020FF0E3C008CA039 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6674395210B448A009F8DBB /* 01-Splash-Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-Splash-Screen.jpg"; sourceTree = "<group>"; };
 		B6B875A620FF0DDB008CA039 /* CoreData_OX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData_OX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B875B120FF0DDB008CA039 /* CoreData_OX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData_OX.xcdatamodel; sourceTree = "<group>"; };
 		B6B875B320FF0DDB008CA039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				B6B875C220FF0E3C008CA039 /* Model */,
 				B6B875BF20FF0E3C008CA039 /* View */,
 				B6B875B320FF0DDB008CA039 /* Assets.xcassets */,
+				B6674395210B448A009F8DBB /* 01-Splash-Screen.jpg */,
 				B6B875B820FF0DDB008CA039 /* Info.plist */,
 				B6B875B020FF0DDB008CA039 /* CoreData_OX.xcdatamodeld */,
 			);
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B875C820FF0E3D008CA039 /* Main.storyboard in Resources */,
+				B6674396210B448A009F8DBB /* 01-Splash-Screen.jpg in Resources */,
 				B6B875B420FF0DDB008CA039 /* Assets.xcassets in Resources */,
 				B6B875C720FF0E3D008CA039 /* LaunchScreen.storyboard in Resources */,
 			);

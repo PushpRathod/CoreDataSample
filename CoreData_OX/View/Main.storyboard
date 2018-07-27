@@ -25,11 +25,20 @@
                                     <action selector="saveObject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vn7-DT-dvF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfD-dh-Ozs">
+                                <rect key="frame" x="164" y="419" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1J9-e9-iV0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OV2-Er-vxM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="34D-Va-f0B"/>
                             <constraint firstItem="OV2-Er-vxM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxZ-rd-3ul"/>
+                            <constraint firstItem="NfD-dh-Ozs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSJ-So-huV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NfD-dh-Ozs" secondAttribute="bottom" constant="218" id="yA8-Kt-Qpo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

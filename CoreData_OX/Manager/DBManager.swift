@@ -68,7 +68,7 @@ class DBManager {
             let result = try managedContext.fetch(fetchRequest).first as! User
             result.fname = objectModel.fname! + "Edited"
             result.lname = objectModel.lname
-            result.profilePicPath = objectModel.profilePicPath
+            result.profilePicPath = saveImage(image: #imageLiteral(resourceName: "01-Splash-Screen.jpg"))
             result.id = objectModel.id as NSDate
             try managedContext.save()
             print(result)
@@ -77,6 +77,40 @@ class DBManager {
         }
     }
     
+    func saveImage(image: UIImage) -> String{
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        // choose a name for your image
+        let fileName = "\(getUpdatedID())" + ".jpg"
+        // create the destination file url to save your image
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        // get your UIImage jpeg data representation and check if the destination file url already exists
+        if let data = UIImageJPEGRepresentation(image, 1.0),
+            !FileManager.default.fileExists(atPath: fileURL.path) {
+            do {
+                // writes the image data to disk
+                try data.write(to: fileURL)
+                print("file saved")
+                return fileURL.lastPathComponent
+            } catch {
+                print("error saving file:", error)
+            }
+        }
+        return fileURL.lastPathComponent
+    }
+    
+    func getImage(id: String) -> UIImage {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path:String = documentsDirectory.appendingPathComponent(id).absoluteString
+        let image = try! UIImage(data: Data(contentsOf: URL(fileURLWithPath: path)))
+        return image!
+    }
+    
+    func getUpdatedID() -> Int {
+        var int = UserDefaults.standard.integer(forKey: "Unique")
+        int = int + 1
+        UserDefaults.standard.set(int, forKey: "Unique")
+        return UserDefaults.standard.integer(forKey: "Unique")
+    }
     
     
     
